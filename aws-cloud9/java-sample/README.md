@@ -21,3 +21,18 @@ default Java development toolset to OpenJDK 8
 Run the command line versions of the Java
 
     $ java -version
+    
+### 2. Set Up With Gradle
+
+Install SDKMAN :
+    
+    $ curl -s "https://get.sdkman.io" | bash
+    $ source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+Install Gradle by using SDKMAN
+
+    $ sdk install gradle
+    
+Confirm the installation 
+    
+    $ gradle -version
