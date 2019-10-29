@@ -9,6 +9,10 @@ aws cloud9
 
 #### Connecting to Work EC2 Using SSH
 
+To connect to work instance using SSH
+
+    $ ssh -i *keyfilename*.pem *username*@*hostname*
+
 #### Configuring Work EC2
 
 Run Update : 
