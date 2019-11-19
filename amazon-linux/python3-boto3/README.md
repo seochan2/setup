@@ -16,3 +16,20 @@ Use the which command to confirm that the install was successful
     
     $ which python3
     /usr/bin/python3
+    
+#### Install virtualenv and create the python3 environment
+
+Install virtualenv for the current user using pip3
+
+    $ pip3 install --user virtualenv
+    
+Create a directory to hold your virtualenv environments, and then use the cd command to make it your current directory
+
+    # mkdir /home/ec2-user/venv
+    # cd /home/ec2-user/venv
+    # pwd
+    /home/ec2-user/venv
+    
+Use the virtualenv command to create the python3 environment
+
+    $ virtualenv -p /usr/bin/python3 python3    
