@@ -33,3 +33,29 @@ Create a directory to hold your virtualenv environments, and then use the cd com
 Use the virtualenv command to create the python3 environment
 
     $ virtualenv -p /usr/bin/python3 python3    
+    
+    
+#### Activate the environment and install Boto 3
+
+Attach an IAM role to EC2 instance
+
+Activate the environment
+
+    $ source /home/ec2-user/venv/python3/bin/activate
+    
+Use the which command to verify
+
+    $ which python
+    ~/venv/python3/bin/python 
+    
+Use the pip3 command to install Boto 3 
+
+    $ pip3 install boto3
+    
+Run Python using the python
+
+    $ python
+    
+Deactivate the python3 environment
+
+    $ deactivate
