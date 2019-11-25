@@ -28,3 +28,15 @@ Start the VNC Server on display number 1
 Check the $DISPLAY environment variable
 
     $ echo $DISPLAY
+    
+#### Connect to the GUI using the MobaXterm
+
+Install MobaXterm
+
+Configure tunneling preferences in MobaXterm
+
+Use SSH tunneling to connect to Server
+
+Open VNC in MobaXterm
+
+Enter the VNC password in the Install TigerVNC
