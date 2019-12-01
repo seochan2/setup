@@ -1,6 +1,11 @@
 Enable a password login when logging into EC2 instance
 =============
 
+### reference link
+
+<https://aws.amazon.com/premiumsupport/knowledge-center/ec2-password-login/>
+
+
 #### Enable a password authentication
 
 Set a password for user
