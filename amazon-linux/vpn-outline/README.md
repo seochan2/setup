@@ -3,10 +3,28 @@ Setting up Outline vpn using AWS Lightsail
 
 #### Create a Lightsail
 
-#### Install software
+#### Install Docker
 
-Install Docker
+Update the installed packages
 
-Install and Configure Outline
+    $ sudo yum update -y
 
-Connect to Your Server
+Install the most recent Docker Community Edition package.
+
+    $ sudo amazon-linux-extras install docker
+
+Start the Docker service.
+    
+    $ sudo service docker start
+
+Add the ec2-user to the docker group 
+    
+    $ sudo usermod -a -G docker ec2-user
+
+Verify that the ec2-user can run Docker 
+
+    $ docker info
+
+#### Install and Configure Outline
+
+#### Connect to Your Server
