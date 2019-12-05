@@ -27,4 +27,8 @@ Verify that the ec2-user can run Docker
 
 #### Install and Configure Outline
 
+Install Outline
+
+    $ sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"
+
 #### Connect to Your Server
