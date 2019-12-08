@@ -11,6 +11,11 @@ IF "%isSkype%"=="true" (
 )
 
 IF "%isXbox_Group%"=="true" (
-    echo "Remove App - isXbox_Group"
-    powershell.exe -Command "Get-AppxPackage -AllUsers *Xbox* | Remove-AppxPackage"
+    echo "Remove App - isXbox_Group (Exclude Microsoft.XboxGameCallableUI)"
+    powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxSpeechToTextOverlay | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.Xbox.TCUI | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxApp | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxGamingOverlay | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxIdentityProvider | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxGameOverlay | Remove-AppxPackage"
 )
