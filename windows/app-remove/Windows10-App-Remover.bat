@@ -4,6 +4,7 @@ echo.
 
 SET isSkype=true
 SET isXbox_Group=true
+SET isPeople=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -18,4 +19,9 @@ IF "%isXbox_Group%"=="true" (
     powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxGamingOverlay | Remove-AppxPackage"
     powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxIdentityProvider | Remove-AppxPackage"
     powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxGameOverlay | Remove-AppxPackage"
+)
+
+IF "%isPeople%"=="true" (
+    echo "Remove App - People"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.People | Remove-AppxPackage"
 )
