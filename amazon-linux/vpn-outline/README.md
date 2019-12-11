@@ -11,7 +11,11 @@ Update the installed packages
 
 Install the most recent Docker Community Edition package.
 
+    Amazon Linux 2
     $ sudo amazon-linux-extras install docker
+    
+    Amazon Linux
+    $ sudo yum install docker -y
 
 Start the Docker service.
     
