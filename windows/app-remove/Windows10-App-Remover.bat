@@ -8,6 +8,7 @@ SET isPeople=true
 SET isZuneMusic=true
 SET isWindowsCamera=true
 SET isZuneVideo=true
+SET isWallet=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -42,4 +43,9 @@ IF "%isWindowsCamera%"=="true" (
 IF "%isZuneVideo%"=="true" (
     echo "Remove App - People"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.ZuneVideo | Remove-AppxPackage"
+)
+
+IF "%isWallet%"=="true" (
+    echo "Remove App - People"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Wallet | Remove-AppxPackage"
 )
