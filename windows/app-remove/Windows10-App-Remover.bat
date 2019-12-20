@@ -12,6 +12,7 @@ SET isWallet=true
 SET isOneNote=true
 SET isWindowsMaps=true
 SET isWindowsFeedbackHub=true
+SET isWindowsCortana=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -66,4 +67,9 @@ IF "%isWindowsMaps%"=="true" (
 IF "%isWindowsFeedbackHub%"=="true" (
     echo "Remove App - People"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsFeedbackHub | Remove-AppxPackage"
+)
+
+IF "%isWindowsCortana%"=="true" (
+    echo "Remove App - People"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage"
 )
