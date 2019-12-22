@@ -14,6 +14,7 @@ SET isWindowsMaps=true
 SET isWindowsFeedbackHub=true
 SET isWindowsCortana=true
 SET isOneConnect=true
+SET isMessaging=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -78,4 +79,9 @@ IF "%isWindowsCortana%"=="true" (
 IF "%isOneConnect%"=="true" (
     echo "Remove App - People"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.OneConnect | Remove-AppxPackage"
+)
+
+IF "%isMessaging%"=="true" (
+    echo "Remove App - People"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Messaging | Remove-AppxPackage"
 )
