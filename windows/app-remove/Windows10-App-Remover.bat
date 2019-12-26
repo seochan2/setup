@@ -25,7 +25,7 @@ IF "%isSkype%"=="true" (
 )
 
 IF "%isXbox_Group%"=="true" (
-    echo "Remove App - isXbox_Group (Exclude Microsoft.XboxGameCallableUI)"
+    echo "Remove App - Xbox_Group (Exclude Microsoft.XboxGameCallableUI)"
     powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxSpeechToTextOverlay | Remove-AppxPackage"
     powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.Xbox.TCUI | Remove-AppxPackage"
     powershell.exe -Command "Get-AppxPackage -AllUsers -Name Microsoft.XboxApp | Remove-AppxPackage"
@@ -40,66 +40,61 @@ IF "%isPeople%"=="true" (
 )
 
 IF "%isZuneMusic%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - ZuneMusic"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.ZuneMusic | Remove-AppxPackage"
 )
 
 IF "%isWindowsCamera%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - WindowsCamera"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsCamera | Remove-AppxPackage"
 )
 
 IF "%isZuneVideo%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - ZuneVideo"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.ZuneVideo | Remove-AppxPackage"
 )
 
 IF "%isWallet%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - Wallet"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Wallet | Remove-AppxPackage"
 )
 
 IF "%isOneNote%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - OneNote"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Office.OneNote | Remove-AppxPackage"
 )
 
 IF "%isWindowsMaps%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - WindowsFeedbackHub"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsMaps | Remove-AppxPackage"
 )
 
 IF "%isWindowsFeedbackHub%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - WindowsFeedbackHub"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsFeedbackHub | Remove-AppxPackage"
 )
 
 IF "%isWindowsCortana%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - WindowsCortana"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.Cortana | Remove-AppxPackage"
 )
 
 IF "%isOneConnect%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - OneConnect"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.OneConnect | Remove-AppxPackage"
 )
 
 IF "%isMessaging%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - Messaging"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Messaging | Remove-AppxPackage"
 )
 
 IF "%isWindowsSoundRecorder%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - WindowsSoundRecorder"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsSoundRecorder | Remove-AppxPackage"
 )
 
 IF "%isMicrosoftStickyNotes%"=="true" (
-    echo "Remove App - People"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MicrosoftStickyNotes | Remove-AppxPackage"
-)
-
-IF "%isGetstarted%"=="true" (
-    echo "Remove App - People"
+    echo "Remove App - MicrosoftStickyNotes"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MicrosoftStickyNotes | Remove-AppxPackage"
 )
