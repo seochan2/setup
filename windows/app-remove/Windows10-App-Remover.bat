@@ -98,3 +98,8 @@ IF "%isMicrosoftStickyNotes%"=="true" (
     echo "Remove App - MicrosoftStickyNotes"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MicrosoftStickyNotes | Remove-AppxPackage"
 )
+
+IF "%isGetstarted%"=="true" (
+    echo "Remove App - Getstarted"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Getstarted | Remove-AppxPackage"
+)
