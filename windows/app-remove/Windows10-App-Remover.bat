@@ -18,6 +18,7 @@ SET isMessaging=true
 SET isWindowsSoundRecorder=true
 SET isMicrosoftStickyNotes=true
 SET isGetstarted=true
+SET isGetHelp=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -102,4 +103,9 @@ IF "%isMicrosoftStickyNotes%"=="true" (
 IF "%isGetstarted%"=="true" (
     echo "Remove App - Getstarted"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Getstarted | Remove-AppxPackage"
+)
+
+IF "%isGetHelp%"=="true" (
+    echo "Remove App - GetHelp"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.GetHelp | Remove-AppxPackage"
 )
