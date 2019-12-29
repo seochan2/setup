@@ -19,6 +19,7 @@ SET isWindowsSoundRecorder=true
 SET isMicrosoftStickyNotes=true
 SET isGetstarted=true
 SET isGetHelp=true
+SET isMicrosoft3DViewer=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -108,4 +109,9 @@ IF "%isGetstarted%"=="true" (
 IF "%isGetHelp%"=="true" (
     echo "Remove App - GetHelp"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.GetHelp | Remove-AppxPackage"
+)
+
+IF "%isMicrosoft3DViewer%"=="true" (
+    echo "Remove App - Microsoft3DViewer"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Microsoft3DViewer | Remove-AppxPackage"
 )
