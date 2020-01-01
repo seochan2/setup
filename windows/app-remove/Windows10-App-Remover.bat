@@ -22,6 +22,7 @@ SET isGetHelp=true
 SET isMicrosoft3DViewer=true
 SET isMicrosoftOfficeHub=true
 SET isPrint3D=true
+SET iswindowscommunicationsapps=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -126,4 +127,9 @@ IF "%isMicrosoftOfficeHub%"=="true" (
 IF "%isPrint3D%"=="true" (
     echo "Remove App - Print3D"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Print3D | Remove-AppxPackage"
+)
+
+IF "%iswindowscommunicationsapps%"=="true" (
+    echo "Remove App - windowscommunicationsapps"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.windowscommunicationsapps | Remove-AppxPackage"
 )
