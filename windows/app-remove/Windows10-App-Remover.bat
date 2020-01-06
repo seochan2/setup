@@ -24,6 +24,7 @@ SET isMicrosoftOfficeHub=true
 SET isPrint3D=true
 SET iswindowscommunicationsapps=true
 SET isMicrosoftSolitaireCollection=true
+SET isBingWeather=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -138,4 +139,9 @@ IF "%iswindowscommunicationsapps%"=="true" (
 IF "%isMicrosoftSolitaireCollection%"=="true" (
     echo "Remove App - MicrosoftSolitaireCollection"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MicrosoftSolitaireCollection | Remove-AppxPackage"
+)
+
+IF "%isBingWeather%"=="true" (
+    echo "Remove App - BingWeather"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.BingWeather | Remove-AppxPackage"
 )
