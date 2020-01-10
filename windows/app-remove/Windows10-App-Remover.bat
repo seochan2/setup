@@ -25,6 +25,7 @@ SET isPrint3D=true
 SET iswindowscommunicationsapps=true
 SET isMicrosoftSolitaireCollection=true
 SET isBingWeather=true
+SET isAdvertisingXaml=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -144,4 +145,9 @@ IF "%isMicrosoftSolitaireCollection%"=="true" (
 IF "%isBingWeather%"=="true" (
     echo "Remove App - BingWeather"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.BingWeather | Remove-AppxPackage"
+)
+
+IF "%isAdvertisingXaml%"=="true" (
+    echo "Remove App - Advertising.Xaml"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Advertising.Xaml | Remove-AppxPackage"
 )
