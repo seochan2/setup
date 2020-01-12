@@ -27,6 +27,7 @@ SET isMicrosoftSolitaireCollection=true
 SET isBingWeather=true
 SET isAdvertisingXaml=true
 SET isMSPaint=true
+SET isWebMediaExtensions=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -153,7 +154,12 @@ IF "%isAdvertisingXaml%"=="true" (
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Advertising.Xaml | Remove-AppxPackage"
 )
 
-IF "%iMSPaint%"=="true" (
+IF "%isMSPaint%"=="true" (
     echo "Remove App - MSPaint"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MSPaint | Remove-AppxPackage"
+)
+
+IF "%isWebMediaExtensions%"=="true" (
+    echo "Remove App - WebMediaExtensions"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WebMediaExtensions | Remove-AppxPackage"
 )
