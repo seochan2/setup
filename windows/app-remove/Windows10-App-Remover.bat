@@ -29,6 +29,7 @@ SET isAdvertisingXaml=true
 SET isMSPaint=true
 SET isWebMediaExtensions=true
 SET isMicrosoftEdge=true
+SET isStorePurchaseApp=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -168,4 +169,9 @@ IF "%isWebMediaExtensions%"=="true" (
 IF "%isMicrosoftEdge%"=="true" (
     echo "Remove App - MicrosoftEdge"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MicrosoftEdge | Remove-AppxPackage"
+)
+
+IF "%isStorePurchaseApp%"=="true" (
+    echo "Remove App - StorePurchaseApp"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.StorePurchaseApp | Remove-AppxPackage"
 )
