@@ -30,6 +30,7 @@ SET isMSPaint=true
 SET isWebMediaExtensions=true
 SET isMicrosoftEdge=true
 SET isStorePurchaseApp=true
+SET isCBSPreview=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -174,4 +175,9 @@ IF "%isMicrosoftEdge%"=="true" (
 IF "%isStorePurchaseApp%"=="true" (
     echo "Remove App - StorePurchaseApp"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.StorePurchaseApp | Remove-AppxPackage"
+)
+
+IF "%isCBSPreview%"=="true" (
+    echo "Remove App - CBSPreview"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.CBSPreview | Remove-AppxPackage"
 )
