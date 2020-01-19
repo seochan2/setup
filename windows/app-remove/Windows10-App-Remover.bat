@@ -31,6 +31,7 @@ SET isWebMediaExtensions=true
 SET isMicrosoftEdge=true
 SET isStorePurchaseApp=true
 SET isCBSPreview=true
+SET isBioEnrollment=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -180,4 +181,9 @@ IF "%isStorePurchaseApp%"=="true" (
 IF "%isCBSPreview%"=="true" (
     echo "Remove App - CBSPreview"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.CBSPreview | Remove-AppxPackage"
+)
+
+IF "%isBioEnrollment%"=="true" (
+    echo "Remove App - BioEnrollment"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.BioEnrollment | Remove-AppxPackage"
 )
