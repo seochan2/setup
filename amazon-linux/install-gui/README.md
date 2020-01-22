@@ -3,7 +3,7 @@ Install a GUI in EC2 instance running Amazon Linux 2
 
 ### reference link
 
-<https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-python3-boto3/>
+<https://aws.amazon.com/ko/premiumsupport/knowledge-center/ec2-linux-2-install-gui/>
 
 
 #### Install MATE
