@@ -32,6 +32,7 @@ SET isMicrosoftEdge=true
 SET isStorePurchaseApp=true
 SET isCBSPreview=true
 SET isBioEnrollment=true
+SET isPrintDialog=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -186,4 +187,9 @@ IF "%isCBSPreview%"=="true" (
 IF "%isBioEnrollment%"=="true" (
     echo "Remove App - BioEnrollment"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.BioEnrollment | Remove-AppxPackage"
+)
+
+IF "%isPrintDialog%"=="true" (
+    echo "Remove App - PrintDialog"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.PrintDialog | Remove-AppxPackage"
 )
