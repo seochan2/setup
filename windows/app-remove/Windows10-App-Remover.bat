@@ -35,6 +35,7 @@ SET isBioEnrollment=true
 SET isPrintDialog=true
 SET isWindowsAlarms=true
 SET isWindowsCalculator=true
+SET isPhotos=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -199,4 +200,9 @@ IF "%isPrintDialog%"=="true" (
 IF "%isWindowsAlarms%"=="true" (
     echo "Remove App - WindowsCalculator"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsCalculator | Remove-AppxPackage"
+)
+
+IF "%isPhotos%"=="true" (
+    echo "Remove App - Photos"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Photos | Remove-AppxPackage"
 )
