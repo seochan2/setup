@@ -36,6 +36,7 @@ SET isPrintDialog=true
 SET isWindowsAlarms=true
 SET isWindowsCalculator=true
 SET isPhotos=true
+SET isWindowsStore=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -205,4 +206,9 @@ IF "%isWindowsAlarms%"=="true" (
 IF "%isPhotos%"=="true" (
     echo "Remove App - Photos"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Photos | Remove-AppxPackage"
+)
+
+IF "%isWindowsStore%"=="true" (
+    echo "Remove App - WindowsStore"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsStore | Remove-AppxPackage"
 )
