@@ -37,6 +37,7 @@ SET isWindowsAlarms=true
 SET isWindowsCalculator=true
 SET isPhotos=true
 SET isWindowsStore=true
+SET isUIXaml20=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -211,4 +212,9 @@ IF "%isPhotos%"=="true" (
 IF "%isWindowsStore%"=="true" (
     echo "Remove App - WindowsStore"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.WindowsStore | Remove-AppxPackage"
+)
+
+IF "%isUIXaml20%"=="true" (
+    echo "Remove App - UI.Xaml.2.0"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.UI.Xaml.2.0 | Remove-AppxPackage"
 )
