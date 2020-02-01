@@ -12,3 +12,15 @@ Disk Clone시 SSD 제조사 제공 Disk 관리 프로그램 추천. CloneZilla�
 #### 파티션 작업
 
 부팅 VHD 파티션을 신규 추가한 파티션에 Ghost의 Partition To Partition을 사용하여 복사
+
+#### MBR 복구(UEFI GPT 방식 기준)
+
+명령 프롬프트 진입
+
+UEFI 파티션 드라이브 마운트
+
+    X:\Sources>diskpart
+    DISKPART>list vol
+    DISKPART>sel vol 3
+    DISKPART>assign letter=z:
+    DISKPART>exit
