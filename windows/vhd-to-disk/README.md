@@ -20,7 +20,21 @@ Disk Clone시 SSD 제조사 제공 Disk 관리 프로그램 추천. CloneZilla�
 UEFI 파티션 드라이브 마운트
 
     X:\Sources>diskpart
+
     DISKPART>list vol
+
     DISKPART>sel vol 3
+
     DISKPART>assign letter=z:
+
     DISKPART>exit
+
+EFI 파티션내 BCD 파일 및 백업파일 삭제후 재빌드
+
+    X:\Sources>cd /d z:efi\micfosoft\boot\
+
+    Z:\EFI\Microsoft\Boot>bootrec /fixboot
+
+    Z:\EFI\Microsoft\Boot>ren bcd bcd.bak
+
+    Z:\EFI\Microsoft\Boot>bcdboot c:\windows /l ko-KR /s z: /f all    
