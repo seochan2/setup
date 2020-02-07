@@ -39,6 +39,7 @@ SET isPhotos=true
 SET isWindowsStore=true
 SET isUIXaml20=true
 SET isMicrosoftEdgeDevToolsClient=true
+SET isUIXaml21=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -223,4 +224,9 @@ IF "%isUIXaml20%"=="true" (
 IF "%isMicrosoftEdgeDevToolsClient%"=="true" (
     echo "Remove App - MicrosoftEdgeDevToolsClient"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MicrosoftEdgeDevToolsClient | Remove-AppxPackage"
+)
+
+IF "%isUIXaml20%"=="true" (
+    echo "Remove App - UI.Xaml.2.1"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.UI.Xaml.2.1 | Remove-AppxPackage"
 )
