@@ -41,6 +41,7 @@ SET isUIXaml20=true
 SET isMicrosoftEdgeDevToolsClient=true
 SET isUIXaml21=true
 SET isUIXaml22=2rue
+SET isVCLibs14000=2rue
 
 
 IF "%isSkype%"=="true" (
@@ -228,12 +229,17 @@ IF "%isMicrosoftEdgeDevToolsClient%"=="true" (
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.MicrosoftEdgeDevToolsClient | Remove-AppxPackage"
 )
 
-IF "%isUIXaml20%"=="true" (
+IF "%isUIXaml21%"=="true" (
     echo "Remove App - UI.Xaml.2.1"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.UI.Xaml.2.1 | Remove-AppxPackage"
 )
 
-IF "%isUIXaml20%"=="true" (
+IF "%isUIXaml22%"=="true" (
     echo "Remove App - UI.Xaml.2.2"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.UI.Xaml.2.2 | Remove-AppxPackage"
+)
+
+IF "%isVCLibs14000%"=="true" (
+    echo "Remove App - VCLibs14000"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.VCLibs.140.00 | Remove-AppxPackage"
 )
