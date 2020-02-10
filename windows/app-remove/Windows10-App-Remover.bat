@@ -40,9 +40,9 @@ SET isWindowsStore=true
 SET isUIXaml20=true
 SET isMicrosoftEdgeDevToolsClient=true
 SET isUIXaml21=true
-SET isUIXaml22=2rue
-SET isVCLibs14000=2rue
-
+SET isUIXaml22=true
+SET isVCLibs14000=true
+SET isDesktopAppInstaller=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -242,4 +242,9 @@ IF "%isUIXaml22%"=="true" (
 IF "%isVCLibs14000%"=="true" (
     echo "Remove App - VCLibs14000"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.VCLibs.140.00 | Remove-AppxPackage"
+)
+
+IF "%isDesktopAppInstaller%"=="true" (
+    echo "Remove App - DesktopAppInstaller"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.DesktopAppInstaller | Remove-AppxPackage"
 )
