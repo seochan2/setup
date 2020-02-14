@@ -43,6 +43,7 @@ SET isUIXaml21=true
 SET isUIXaml22=true
 SET isVCLibs14000=true
 SET isDesktopAppInstaller=true
+SET isCapturePicker=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -247,4 +248,9 @@ IF "%isVCLibs14000%"=="true" (
 IF "%isDesktopAppInstaller%"=="true" (
     echo "Remove App - DesktopAppInstaller"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.DesktopAppInstaller | Remove-AppxPackage"
+)
+
+IF "%isCapturePicker%"=="true" (
+    echo "Remove App - CapturePicker"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.CapturePicker | Remove-AppxPackage"
 )
