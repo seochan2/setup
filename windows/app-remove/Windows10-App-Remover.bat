@@ -44,6 +44,7 @@ SET isUIXaml22=true
 SET isVCLibs14000=true
 SET isDesktopAppInstaller=true
 SET isCapturePicker=true
+SET isServicesStoreEngagement=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -253,4 +254,9 @@ IF "%isDesktopAppInstaller%"=="true" (
 IF "%isCapturePicker%"=="true" (
     echo "Remove App - CapturePicker"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.CapturePicker | Remove-AppxPackage"
+)
+
+IF "%isServicesStoreEngagement%"=="true" (
+    echo "Remove App - ServicesStoreEngagement"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Services.Store.Engagement | Remove-AppxPackage"
 )
