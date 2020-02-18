@@ -47,6 +47,7 @@ SET isCapturePicker=true
 SET isServicesStoreEngagement=true
 SET isSecHealthUI=true
 SET isWindowsPeopleExperienceHost=true
+SET isVCLibs14000UWPDesktop=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -271,4 +272,9 @@ IF "%isSecHealthUI%"=="true" (
 IF "%isWindowsPeopleExperienceHost%"=="true" (
     echo "Remove App - WindowsPeopleExperienceHost"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.PeopleExperienceHost | Remove-AppxPackage"
+)
+
+IF "%isVCLibs14000UWPDesktop%"=="true" (
+    echo "Remove App - VCLibs14000UWPDesktop"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.VCLibs.140.00.UWPDesktop | Remove-AppxPackage"
 )
