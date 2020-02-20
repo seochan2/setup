@@ -49,6 +49,7 @@ SET isSecHealthUI=true
 SET isWindowsPeopleExperienceHost=true
 SET isVCLibs14000UWPDesktop=true
 SET isWin32WebViewHost=true
+SET isWindowsAssignedAccessLockApp=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -283,4 +284,9 @@ IF "%isVCLibs14000UWPDesktop%"=="true" (
 IF "%isWin32WebViewHost%"=="true" (
     echo "Remove App - Win32WebViewHost"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Win32WebViewHost | Remove-AppxPackage"
+)
+
+IF "%isWindowsAssignedAccessLockApp%"=="true" (
+    echo "Remove App - Windows.AssignedAccessLockApp"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.AssignedAccessLockApp | Remove-AppxPackage"
 )
