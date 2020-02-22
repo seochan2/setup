@@ -51,6 +51,7 @@ SET isVCLibs14000UWPDesktop=true
 SET isWin32WebViewHost=true
 SET isWindowsAssignedAccessLockApp=true
 SET isImmersivecontrolpanel=true
+SET isWindowsParentalControls=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -295,4 +296,9 @@ IF "%isWindowsAssignedAccessLockApp%"=="true" (
 IF "%isImmersivecontrolpanel%"=="true" (
     echo "Remove App - immersivecontrolpanel"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.immersivecontrolpanel | Remove-AppxPackage"
+)
+
+IF "%isWindowsParentalControls%"=="true" (
+    echo "Remove App - windows.ParentalControls"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.ParentalControls | Remove-AppxPackage"
 )
