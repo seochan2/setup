@@ -52,6 +52,7 @@ SET isWin32WebViewHost=true
 SET isWindowsAssignedAccessLockApp=true
 SET isImmersivecontrolpanel=true
 SET isWindowsParentalControls=true
+SET isPPIProjection=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -301,4 +302,9 @@ IF "%isImmersivecontrolpanel%"=="true" (
 IF "%isWindowsParentalControls%"=="true" (
     echo "Remove App - windows.ParentalControls"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.ParentalControls | Remove-AppxPackage"
+)
+
+IF "%isPPIProjection%"=="true" (
+    echo "Remove App - windows.PPIProjection"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.PPIProjection | Remove-AppxPackage"
 )
