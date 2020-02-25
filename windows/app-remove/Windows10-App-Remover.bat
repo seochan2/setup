@@ -54,6 +54,7 @@ SET isImmersivecontrolpanel=true
 SET isWindowsParentalControls=true
 SET isPPIProjection=true
 SET isLockApp=true
+SET isECApp=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -313,4 +314,9 @@ IF "%isPPIProjection%"=="true" (
 IF "%isLockApp%"=="true" (
     echo "Remove App - windows.LockApp"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.LockApp | Remove-AppxPackage"
+)
+
+IF "%isECApp%"=="true" (
+    echo "Remove App - windows.ECApp"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.ECApp | Remove-AppxPackage"
 )
