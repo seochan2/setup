@@ -56,6 +56,7 @@ SET isPPIProjection=true
 SET isLockApp=true
 SET isECApp=true
 SET isCredDialogHost=true
+SET isWindowsApprepChxApp=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -308,21 +309,26 @@ IF "%isWindowsParentalControls%"=="true" (
 )
 
 IF "%isPPIProjection%"=="true" (
-    echo "Remove App - windows.PPIProjection"
+    echo "Remove App - PPIProjection"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.PPIProjection | Remove-AppxPackage"
 )
 
 IF "%isLockApp%"=="true" (
-    echo "Remove App - windows.LockApp"
+    echo "Remove App - LockApp"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.LockApp | Remove-AppxPackage"
 )
 
 IF "%isECApp%"=="true" (
-    echo "Remove App - windows.ECApp"
+    echo "Remove App - ECApp"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.ECApp | Remove-AppxPackage"
 )
 
 IF "%isCredDialogHost%"=="true" (
-    echo "Remove App - windows.CredDialogHost"
+    echo "Remove App - CredDialogHost"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.CredDialogHost | Remove-AppxPackage"
+)
+
+IF "%isWindowsApprepChxApp%"=="true" (
+    echo "Remove App - WindowsApprepChxApp"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.Apprep.ChxApp | Remove-AppxPackage"
 )
