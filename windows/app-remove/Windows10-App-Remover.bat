@@ -57,6 +57,7 @@ SET isLockApp=true
 SET isECApp=true
 SET isCredDialogHost=true
 SET isWindowsApprepChxApp=true
+SET isAsyncTextService=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -331,4 +332,11 @@ IF "%isCredDialogHost%"=="true" (
 IF "%isWindowsApprepChxApp%"=="true" (
     echo "Remove App - WindowsApprepChxApp"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.Apprep.ChxApp | Remove-AppxPackage"
+)
+
+IF "%isAsyncTextService%"=="true" (
+    echo "Remove App - AsyncTextService"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.AsyncTextService | Remove-AppxPackage"
+)
+)
 )
