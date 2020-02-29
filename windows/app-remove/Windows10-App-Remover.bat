@@ -58,6 +58,7 @@ SET isECApp=true
 SET isCredDialogHost=true
 SET isWindowsApprepChxApp=true
 SET isAsyncTextService=true
+SET isWindowsCloudExperienceHost=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -338,5 +339,9 @@ IF "%isAsyncTextService%"=="true" (
     echo "Remove App - AsyncTextService"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.AsyncTextService | Remove-AppxPackage"
 )
+
+IF "%isWindowsCloudExperienceHost%"=="true" (
+    echo "Remove App - WindowsCloudExperienceHost"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.CloudExperienceHost | Remove-AppxPackage"
 )
-)
+
