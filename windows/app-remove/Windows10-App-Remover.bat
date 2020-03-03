@@ -61,6 +61,7 @@ SET isAsyncTextService=true
 SET isWindowsCloudExperienceHost=true
 SET isWindowsContentDeliveryManager=true
 SET isWindowsOOBENetworkCaptivePortal=true
+SET isWindowsOOBENetworkConnectionFlow=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -355,5 +356,10 @@ IF "%isWindowsContentDeliveryManager%"=="true" (
 IF "%isWindowsOOBENetworkCaptivePortal%"=="true" (
     echo "Remove App - WindowsOOBENetworkCaptivePortal"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.OOBENetworkCaptivePortal | Remove-AppxPackage"
+)
+
+IF "%isWindowsOOBENetworkConnectionFlow%"=="true" (
+    echo "Remove App - WindowsOOBENetworkConnectionFlow"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.OOBENetworkConnectionFlow | Remove-AppxPackage"
 )
 
