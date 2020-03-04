@@ -62,6 +62,7 @@ SET isWindowsCloudExperienceHost=true
 SET isWindowsContentDeliveryManager=true
 SET isWindowsOOBENetworkCaptivePortal=true
 SET isWindowsOOBENetworkConnectionFlow=true
+SET isWindowsPinningConfirmationDialog=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -361,5 +362,10 @@ IF "%isWindowsOOBENetworkCaptivePortal%"=="true" (
 IF "%isWindowsOOBENetworkConnectionFlow%"=="true" (
     echo "Remove App - WindowsOOBENetworkConnectionFlow"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.OOBENetworkConnectionFlow | Remove-AppxPackage"
+)
+
+IF "%isWindowsPinningConfirmationDialog%"=="true" (
+    echo "Remove App - WindowsPinningConfirmationDialog"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.PinningConfirmationDialog | Remove-AppxPackage"
 )
 
