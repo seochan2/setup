@@ -64,6 +64,7 @@ SET isWindowsOOBENetworkCaptivePortal=true
 SET isWindowsOOBENetworkConnectionFlow=true
 SET isWindowsPinningConfirmationDialog=true
 SET isWindowsSecureAssessmentBrowser=true
+SET isWindowsShellExperienceHost=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -373,4 +374,9 @@ IF "%isWindowsPinningConfirmationDialog%"=="true" (
 IF "%isWindowsSecureAssessmentBrowser%"=="true" (
     echo "Remove App - WindowsSecureAssessmentBrowser"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.SecureAssessmentBrowser | Remove-AppxPackage"
+)
+
+IF "%isWindowsSecureAssessmentBrowser%"=="true" (
+    echo "Remove App - WindowsShellExperienceHost"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.Windows.ShellExperienceHost | Remove-AppxPackage"
 )
