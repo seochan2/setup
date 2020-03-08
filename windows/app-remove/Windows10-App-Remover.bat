@@ -66,6 +66,7 @@ SET isWindowsPinningConfirmationDialog=true
 SET isWindowsSecureAssessmentBrowser=true
 SET isWindowsShellExperienceHost=true
 SET isAccountsControl=true
+SET isNETNativeRuntime16=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -385,4 +386,9 @@ IF "%isWindowsShellExperienceHost%"=="true" (
 IF "%isAccountsControl%"=="true" (
     echo "Remove App - AccountsControl"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.AccountsControl | Remove-AppxPackage"
+)
+
+IF "%isNETNativeRuntime16%"=="true" (
+    echo "Remove App - NETNativeRuntime16"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.1.6	 | Remove-AppxPackage"
 )
