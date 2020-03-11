@@ -69,6 +69,7 @@ SET isAccountsControl=true
 SET isNETNativeRuntime16=true
 SET isNETNativeRuntime17=true
 SET isNETNativeRuntime21=true
+SET isNETNativeRuntime22=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -403,4 +404,9 @@ IF "%isNETNativeRuntime17%"=="true" (
 IF "%isNETNativeRuntime21%"=="true" (
     echo "Remove App - NETNativeRuntime21"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.2.1	 | Remove-AppxPackage"
+)
+
+IF "%isNETNativeRuntime22%"=="true" (
+    echo "Remove App - NETNativeRuntime22"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.2.2	 | Remove-AppxPackage"
 )
