@@ -72,6 +72,7 @@ SET isNETNativeRuntime21=true
 SET isNETNativeRuntime22=true
 SET isNETNativeFramework16=true
 SET isNETNativeFramework17=true
+SET isNETNativeFramework21=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -395,30 +396,35 @@ IF "%isAccountsControl%"=="true" (
 
 IF "%isNETNativeRuntime16%"=="true" (
     echo "Remove App - NETNativeRuntime16"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.1.6	 | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.1.6	| Remove-AppxPackage"
 )
 
 IF "%isNETNativeRuntime17%"=="true" (
     echo "Remove App - NETNativeRuntime17"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.1.7	 | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.1.7 | Remove-AppxPackage"
 )
 
 IF "%isNETNativeRuntime21%"=="true" (
     echo "Remove App - NETNativeRuntime21"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.2.1	 | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.2.1 | Remove-AppxPackage"
 )
 
 IF "%isNETNativeRuntime22%"=="true" (
     echo "Remove App - NETNativeRuntime22"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.2.2	 | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Runtime.2.2 | Remove-AppxPackage"
 )
 
 IF "%isNETNativeFramework16%"=="true" (
     echo "Remove App - NETNativeFramework16"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.1.6	 | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.1.6 | Remove-AppxPackage"
 )
 
 IF "%isNETNativeFramework17%"=="true" (
     echo "Remove App - NETNativeFramework17"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.1.7	 | Remove-AppxPackage"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.1.7 | Remove-AppxPackage"
+)
+
+IF "%isNETNativeFramework21%"=="true" (
+    echo "Remove App - NETNativeFramework21"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.2.1 | Remove-AppxPackage"
 )
