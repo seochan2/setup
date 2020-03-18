@@ -73,6 +73,7 @@ SET isNETNativeRuntime22=true
 SET isNETNativeFramework16=true
 SET isNETNativeFramework17=true
 SET isNETNativeFramework21=true
+SET isNETNativeFramework22=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -427,4 +428,9 @@ IF "%isNETNativeFramework17%"=="true" (
 IF "%isNETNativeFramework21%"=="true" (
     echo "Remove App - NETNativeFramework21"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.2.1 | Remove-AppxPackage"
+)
+
+IF "%isNETNativeFramework22%"=="true" (
+    echo "Remove App - NETNativeFramework22"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.2.2 | Remove-AppxPackage"
 )
