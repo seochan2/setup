@@ -74,6 +74,7 @@ SET isNETNativeFramework16=true
 SET isNETNativeFramework17=true
 SET isNETNativeFramework21=true
 SET isNETNativeFramework22=true
+SET isLanguageExperiencePackko-kr=true
 
 IF "%isSkype%"=="true" (
     echo "Remove App - Skype"
@@ -433,4 +434,9 @@ IF "%isNETNativeFramework21%"=="true" (
 IF "%isNETNativeFramework22%"=="true" (
     echo "Remove App - NETNativeFramework22"
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.2.2 | Remove-AppxPackage"
+)
+
+IF "%isLanguageExperiencePackko-kr%"=="true" (
+    echo "Remove App - LanguageExperiencePackko-kr"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.LanguageExperiencePackko-kr | Remove-AppxPackage"
 )
