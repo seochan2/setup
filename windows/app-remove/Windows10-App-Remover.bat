@@ -74,7 +74,7 @@ SET isNETNativeFramework16=true
 SET isNETNativeFramework17=true
 SET isNETNativeFramework21=true
 SET isNETNativeFramework22=true
-SET isLanguageExperiencePackko-kr=true
+SET isLanguageExperiencePackkokr=true
 SET isAADBrokerPlugin=true
 
 IF "%isSkype%"=="true" (
@@ -437,9 +437,9 @@ IF "%isNETNativeFramework22%"=="true" (
     powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.NET.Native.Framework.2.2 | Remove-AppxPackage"
 )
 
-IF "%isLanguageExperiencePackko-kr%"=="true" (
-    echo "Remove App - LanguageExperiencePackko-kr"
-    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.LanguageExperiencePackko-kr | Remove-AppxPackage"
+IF "%isLanguageExperiencePackkokr%"=="true" (
+    echo "Remove App - LanguageExperiencePackkokr"
+    powershell.exe -Command "Get-AppxPackage -AllUsers Microsoft.LanguageExperiencePackkokr | Remove-AppxPackage"
 )
 
 IF "%isAADBrokerPlugin%"=="true" (
